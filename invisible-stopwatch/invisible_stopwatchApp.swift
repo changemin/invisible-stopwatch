@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct invisible_stopwatchApp: App {
+struct InvisibleStopwatchApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

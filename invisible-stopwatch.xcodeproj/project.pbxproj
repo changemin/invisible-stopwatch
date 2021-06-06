@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		422160C7266CEB4D00D487D3 /* Spacers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422160C6266CEB4D00D487D3 /* Spacers.swift */; };
+		422160CA266CED8900D487D3 /* GestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422160C9266CED8900D487D3 /* GestureView.swift */; };
+		422160CD266CF0A200D487D3 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422160CC266CF0A200D487D3 /* FontStyle.swift */; };
+		422160D4266CF69C00D487D3 /* NanumSquareRoundEB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 422160D1266CF37900D487D3 /* NanumSquareRoundEB.ttf */; };
+		422160D5266CF69F00D487D3 /* NanumSquareRoundL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 422160D2266CF37900D487D3 /* NanumSquareRoundL.ttf */; };
+		422160D6266CF6A200D487D3 /* NanumSquareRoundB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 422160D0266CF37200D487D3 /* NanumSquareRoundB.ttf */; };
+		422160D7266CF6A500D487D3 /* NanumSquareRoundR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 422160CF266CF37200D487D3 /* NanumSquareRoundR.ttf */; };
 		42F36456266CE4BB0066F828 /* invisible_stopwatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F36455266CE4BB0066F828 /* invisible_stopwatchApp.swift */; };
 		42F36458266CE4BB0066F828 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F36457266CE4BB0066F828 /* ContentView.swift */; };
 		42F3645A266CE4BB0066F828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42F36459266CE4BB0066F828 /* Assets.xcassets */; };
@@ -16,6 +23,13 @@
 
 /* Begin PBXFileReference section */
 		1CF93CEC196DF7C20E3207D1 /* Pods_invisible_stopwatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_invisible_stopwatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		422160C6266CEB4D00D487D3 /* Spacers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacers.swift; sourceTree = "<group>"; };
+		422160C9266CED8900D487D3 /* GestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureView.swift; sourceTree = "<group>"; };
+		422160CC266CF0A200D487D3 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
+		422160CF266CF37200D487D3 /* NanumSquareRoundR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundR.ttf; sourceTree = "<group>"; };
+		422160D0266CF37200D487D3 /* NanumSquareRoundB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundB.ttf; sourceTree = "<group>"; };
+		422160D1266CF37900D487D3 /* NanumSquareRoundEB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundEB.ttf; sourceTree = "<group>"; };
+		422160D2266CF37900D487D3 /* NanumSquareRoundL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundL.ttf; sourceTree = "<group>"; };
 		42F36452266CE4BB0066F828 /* invisible-stopwatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "invisible-stopwatch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F36455266CE4BB0066F828 /* invisible_stopwatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = invisible_stopwatchApp.swift; sourceTree = "<group>"; };
 		42F36457266CE4BB0066F828 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,11 +52,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		422160C5266CEAED00D487D3 /* components */ = {
+		422160C5266CEAED00D487D3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				422160C6266CEB4D00D487D3 /* Spacers.swift */,
 			);
-			path = components;
+			path = Components;
+			sourceTree = "<group>";
+		};
+		422160C8266CEBB300D487D3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				42F36457266CE4BB0066F828 /* ContentView.swift */,
+				422160C9266CED8900D487D3 /* GestureView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		422160CB266CF09600D487D3 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				422160CC266CF0A200D487D3 /* FontStyle.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		422160CE266CF36100D487D3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				422160D1266CF37900D487D3 /* NanumSquareRoundEB.ttf */,
+				422160D2266CF37900D487D3 /* NanumSquareRoundL.ttf */,
+				422160D0266CF37200D487D3 /* NanumSquareRoundB.ttf */,
+				422160CF266CF37200D487D3 /* NanumSquareRoundR.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		42F36449266CE4BB0066F828 = {
@@ -66,9 +109,11 @@
 		42F36454266CE4BB0066F828 /* invisible-stopwatch */ = {
 			isa = PBXGroup;
 			children = (
-				422160C5266CEAED00D487D3 /* components */,
+				422160CE266CF36100D487D3 /* Fonts */,
+				422160CB266CF09600D487D3 /* Modifiers */,
+				422160C8266CEBB300D487D3 /* Views */,
+				422160C5266CEAED00D487D3 /* Components */,
 				42F36455266CE4BB0066F828 /* invisible_stopwatchApp.swift */,
-				42F36457266CE4BB0066F828 /* ContentView.swift */,
 				42F36459266CE4BB0066F828 /* Assets.xcassets */,
 				42F3645E266CE4BB0066F828 /* Info.plist */,
 				42F3645B266CE4BB0066F828 /* Preview Content */,
@@ -112,6 +157,7 @@
 				42F3644E266CE4BB0066F828 /* Sources */,
 				42F3644F266CE4BB0066F828 /* Frameworks */,
 				42F36450266CE4BB0066F828 /* Resources */,
+				422160D3266CF50800D487D3 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -160,13 +206,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				42F3645D266CE4BB0066F828 /* Preview Assets.xcassets in Resources */,
+				422160D5266CF69F00D487D3 /* NanumSquareRoundL.ttf in Resources */,
+				422160D4266CF69C00D487D3 /* NanumSquareRoundEB.ttf in Resources */,
 				42F3645A266CE4BB0066F828 /* Assets.xcassets in Resources */,
+				422160D6266CF6A200D487D3 /* NanumSquareRoundB.ttf in Resources */,
+				422160D7266CF6A500D487D3 /* NanumSquareRoundR.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		422160D3266CF50800D487D3 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		D1708E970F2683E32E30274D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -198,6 +266,9 @@
 			files = (
 				42F36458266CE4BB0066F828 /* ContentView.swift in Sources */,
 				42F36456266CE4BB0066F828 /* invisible_stopwatchApp.swift in Sources */,
+				422160CA266CED8900D487D3 /* GestureView.swift in Sources */,
+				422160C7266CEB4D00D487D3 /* Spacers.swift in Sources */,
+				422160CD266CF0A200D487D3 /* FontStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
