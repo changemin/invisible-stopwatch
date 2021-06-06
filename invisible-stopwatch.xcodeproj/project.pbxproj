@@ -11,15 +11,19 @@
 		42F36458266CE4BB0066F828 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F36457266CE4BB0066F828 /* ContentView.swift */; };
 		42F3645A266CE4BB0066F828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42F36459266CE4BB0066F828 /* Assets.xcassets */; };
 		42F3645D266CE4BB0066F828 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42F3645C266CE4BB0066F828 /* Preview Assets.xcassets */; };
+		5E7FD3B07723242CF203A875 /* Pods_invisible_stopwatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF93CEC196DF7C20E3207D1 /* Pods_invisible_stopwatch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1CF93CEC196DF7C20E3207D1 /* Pods_invisible_stopwatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_invisible_stopwatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F36452266CE4BB0066F828 /* invisible-stopwatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "invisible-stopwatch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F36455266CE4BB0066F828 /* invisible_stopwatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = invisible_stopwatchApp.swift; sourceTree = "<group>"; };
 		42F36457266CE4BB0066F828 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		42F36459266CE4BB0066F828 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42F3645C266CE4BB0066F828 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		42F3645E266CE4BB0066F828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		820A7A9469A4C16A745E4443 /* Pods-invisible-stopwatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-invisible-stopwatch.release.xcconfig"; path = "Target Support Files/Pods-invisible-stopwatch/Pods-invisible-stopwatch.release.xcconfig"; sourceTree = "<group>"; };
+		B4F6C976B3959CD34B279515 /* Pods-invisible-stopwatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-invisible-stopwatch.debug.xcconfig"; path = "Target Support Files/Pods-invisible-stopwatch/Pods-invisible-stopwatch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E7FD3B07723242CF203A875 /* Pods_invisible_stopwatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +43,8 @@
 			children = (
 				42F36454266CE4BB0066F828 /* invisible-stopwatch */,
 				42F36453266CE4BB0066F828 /* Products */,
+				6A91E52593267B7D37826101 /* Pods */,
+				E6EEFAB19881BC1EE19274A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +76,24 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		6A91E52593267B7D37826101 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B4F6C976B3959CD34B279515 /* Pods-invisible-stopwatch.debug.xcconfig */,
+				820A7A9469A4C16A745E4443 /* Pods-invisible-stopwatch.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E6EEFAB19881BC1EE19274A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CF93CEC196DF7C20E3207D1 /* Pods_invisible_stopwatch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -76,6 +101,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42F36461266CE4BB0066F828 /* Build configuration list for PBXNativeTarget "invisible-stopwatch" */;
 			buildPhases = (
+				D1708E970F2683E32E30274D /* [CP] Check Pods Manifest.lock */,
 				42F3644E266CE4BB0066F828 /* Sources */,
 				42F3644F266CE4BB0066F828 /* Frameworks */,
 				42F36450266CE4BB0066F828 /* Resources */,
@@ -132,6 +158,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D1708E970F2683E32E30274D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-invisible-stopwatch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		42F3644E266CE4BB0066F828 /* Sources */ = {
@@ -264,6 +315,7 @@
 		};
 		42F36462266CE4BB0066F828 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4F6C976B3959CD34B279515 /* Pods-invisible-stopwatch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -286,6 +338,7 @@
 		};
 		42F36463266CE4BB0066F828 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 820A7A9469A4C16A745E4443 /* Pods-invisible-stopwatch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
