@@ -24,11 +24,12 @@ enum NanumFontWeight {
 
 extension Text {
     func timer() -> Text {
-        self.nanumSquareR(size: 50, .bold, .black)
+        self.foregroundColor(Color("TextColor"))
+            .nanumSquareR(size: 60, .bold, .black)
     }
     func caption() -> Text {
-        self.nanumSquareR(size: 11, .regular, .gray)
-            .foregroundColor(.gray)
+        self.foregroundColor(.gray)
+            .nanumSquareR(size: 13, .regular, .gray)
     }
     func nanumSquareR(size: CGFloat, _ fontWeight: NanumFontWeight, _ color: Color) -> Text {
         self.font(Font.custom(fontWeight.getFontName(), size: size))

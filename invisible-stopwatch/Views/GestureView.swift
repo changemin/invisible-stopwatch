@@ -12,10 +12,18 @@ struct GestureView: View {
     var body: some View {
         GeometryReader { _ in
             Rectangle()
+                .fill(Color.backgroundColor)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .ignoresSafeArea()
-                .opacity(invisibleMode ? 1 : 0)
-        }.onTapGesture {
+        }
+        .highPriorityGesture(TapGesture(count: 2).onEnded {
+            print("double clicked")
+        })
+        .gesture(TapGesture().onEnded {
+            print("single clicked")
+        })
+        .onLongPressGesture {
+            print("Long")
             withAnimation { self.invisibleMode.toggle() }
         }
     }
