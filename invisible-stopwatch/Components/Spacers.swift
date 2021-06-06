@@ -20,7 +20,7 @@ struct VSpacer: View {
 struct HSpacer: View {
     @State private var amount: CGFloat
     var body: some View {
-        Spacer().frame(height: amount)
+        Spacer().frame(width: amount)
     }
     init(_ amount: CGFloat) {
         self.amount = amount

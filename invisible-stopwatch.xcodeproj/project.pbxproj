@@ -16,6 +16,8 @@
 		422160D7266CF6A500D487D3 /* NanumSquareRoundR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 422160CF266CF37200D487D3 /* NanumSquareRoundR.ttf */; };
 		422160DA266CF77B00D487D3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422160D9266CF77B00D487D3 /* Color.swift */; };
 		422160DE266CFD7E00D487D3 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422160DD266CFD7E00D487D3 /* Timer.swift */; };
+		422160E0266D073500D487D3 /* LapList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422160DF266D073500D487D3 /* LapList.swift */; };
+		422160E2266D892900D487D3 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422160E1266D892900D487D3 /* String.swift */; };
 		42F36456266CE4BB0066F828 /* invisible_stopwatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F36455266CE4BB0066F828 /* invisible_stopwatchApp.swift */; };
 		42F36458266CE4BB0066F828 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F36457266CE4BB0066F828 /* ContentView.swift */; };
 		42F3645A266CE4BB0066F828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42F36459266CE4BB0066F828 /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 		422160D2266CF37900D487D3 /* NanumSquareRoundL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundL.ttf; sourceTree = "<group>"; };
 		422160D9266CF77B00D487D3 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		422160DD266CFD7E00D487D3 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		422160DF266D073500D487D3 /* LapList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapList.swift; sourceTree = "<group>"; };
+		422160E1266D892900D487D3 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		42F36452266CE4BB0066F828 /* invisible-stopwatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "invisible-stopwatch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F36455266CE4BB0066F828 /* invisible_stopwatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = invisible_stopwatchApp.swift; sourceTree = "<group>"; };
 		42F36457266CE4BB0066F828 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +73,7 @@
 			children = (
 				42F36457266CE4BB0066F828 /* ContentView.swift */,
 				422160C9266CED8900D487D3 /* GestureView.swift */,
+				422160DF266D073500D487D3 /* LapList.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -97,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				422160D9266CF77B00D487D3 /* Color.swift */,
+				422160E1266D892900D487D3 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -279,7 +285,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				42F36458266CE4BB0066F828 /* ContentView.swift in Sources */,
+				422160E0266D073500D487D3 /* LapList.swift in Sources */,
 				42F36456266CE4BB0066F828 /* invisible_stopwatchApp.swift in Sources */,
+				422160E2266D892900D487D3 /* String.swift in Sources */,
 				422160CA266CED8900D487D3 /* GestureView.swift in Sources */,
 				422160C7266CEB4D00D487D3 /* Spacers.swift in Sources */,
 				422160CD266CF0A200D487D3 /* TextStyle.swift in Sources */,

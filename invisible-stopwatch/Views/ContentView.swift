@@ -11,31 +11,34 @@ struct ContentView: View {
     @State var invisibleMode: Bool = false
     @State var showHelp: Bool = false
     var body: some View {
-        ZStack {
-            GestureView(invisibleMode: $invisibleMode)
-            VStack {
-                if showHelp {
-                    VStack {
-                        Text("1. Single Tap to Record Lap").caption()
-                        Text("2. Double Tap to Start/Stop").caption()
-                        Text("3. Long Press to Hide/Show").caption()
+        GeometryReader { geo in
+            ZStack {
+                GestureView(invisibleMode: $invisibleMode)
+                VStack {
+                    Spacer()
+                    if showHelp {
+                        VStack {
+                            Text("1. Single Tap to Record Lap").caption()
+                            Text("2. Double Tap to Start/Stop").caption()
+                            Text("3. Long Press to Hide/Show").caption()
+                        }
                     }
+                    VSpacer(10)
+                    Timer(invisibleMode: $invisibleMode).allowsHitTesting(false)
+                    LapList().frame(height: geo.size.height/2)
                 }
-                VSpacer(10)
-                Timer(invisibleMode: $invisibleMode).allowsHitTesting(false)
-                
-            }
-            VStack {
-                Spacer()
-                Button(action: {
-                    withAnimation(.spring()) { showHelp.toggle() }
-                }) {
-                    HStack(spacing: 5) {
-                        Image(systemName: "questionmark.circle")
-                        Text("How to Use?")
-                    }.foregroundColor(.green)
+                VStack {
+                    Spacer()
+                    Button(action: {
+                        withAnimation(.spring()) { showHelp.toggle() }
+                    }) {
+                        HStack(spacing: 5) {
+                            Image(systemName: "questionmark.circle")
+                            Text("How to Use?").nanumSquareR(size: 15, .regular, .green)
+                        }.foregroundColor(.green)
+                    }
+                    VSpacer(10)
                 }
-                VSpacer(10)
             }
         }
     }
