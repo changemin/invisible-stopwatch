@@ -38,6 +38,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		422160C5266CEAED00D487D3 /* components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		42F36449266CE4BB0066F828 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +66,7 @@
 		42F36454266CE4BB0066F828 /* invisible-stopwatch */ = {
 			isa = PBXGroup;
 			children = (
+				422160C5266CEAED00D487D3 /* components */,
 				42F36455266CE4BB0066F828 /* invisible_stopwatchApp.swift */,
 				42F36457266CE4BB0066F828 /* ContentView.swift */,
 				42F36459266CE4BB0066F828 /* Assets.xcassets */,
@@ -82,7 +90,6 @@
 				B4F6C976B3959CD34B279515 /* Pods-invisible-stopwatch.debug.xcconfig */,
 				820A7A9469A4C16A745E4443 /* Pods-invisible-stopwatch.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
