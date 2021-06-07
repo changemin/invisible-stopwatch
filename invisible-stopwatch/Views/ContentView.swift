@@ -23,14 +23,13 @@ struct ContentView: View {
                             Text("1. Single Tap to Record Lap").caption()
                             Text("2. Double Tap to Start/Stop").caption()
                             Text("3. Long Press to Hide/Show").caption()
+                            Text("4. Long Press on Timer to Reset").caption()
                         }
                     }
                     VSpacer(10)
                     TimerText(invisibleMode: $invisibleMode)
                         .environmentObject(stopWatch)
-                        .allowsHitTesting(false)
                         .padding(.bottom, invisibleMode ? geo.size.height/2 : 0)
-                    Text("\(stopWatch.timeCount)")
                     if !invisibleMode {
                         LapList().frame(height: geo.size.height/2)
                     }
