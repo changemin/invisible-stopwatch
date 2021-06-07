@@ -25,7 +25,10 @@ struct ContentView: View {
                     }
                     VSpacer(10)
                     Timer(invisibleMode: $invisibleMode).allowsHitTesting(false)
-                    LapList().frame(height: geo.size.height/2)
+                        .padding(.bottom, invisibleMode ? geo.size.height/2 : 0)
+                    if !invisibleMode {
+                        LapList().frame(height: geo.size.height/2)
+                    }
                 }
                 VStack {
                     Spacer()

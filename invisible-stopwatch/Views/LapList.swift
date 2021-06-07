@@ -7,10 +7,6 @@
 
 import SwiftUI
 
-struct Lap {
-    var idx: Int
-}
-
 struct LapList: View {
     var body: some View {
         ScrollView() {
