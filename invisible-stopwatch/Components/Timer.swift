@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-struct Timer: View {
+struct TimerText: View {
     @Binding var invisibleMode: Bool
+    @EnvironmentObject var stopWatch: StopWatch
     private var opacity: Double = 0.2
     private var width: CGFloat = 35
     private var height: CGFloat = 50

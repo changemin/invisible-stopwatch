@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LapList: View {
     var body: some View {
-        ScrollView() {
+        ScrollView {
             Text("LapList")
         }.allowsHitTesting(false)
     }

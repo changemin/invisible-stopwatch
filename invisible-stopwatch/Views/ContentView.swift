@@ -10,10 +10,12 @@ import SwiftUI
 struct ContentView: View {
     @State var invisibleMode: Bool = false
     @State var showHelp: Bool = false
+    @ObservedObject var stopWatch = StopWatch()
     var body: some View {
         GeometryReader { geo in
             ZStack {
                 GestureView(invisibleMode: $invisibleMode)
+                    .environmentObject(stopWatch)
                 VStack {
                     Spacer()
                     if showHelp {
@@ -24,8 +26,11 @@ struct ContentView: View {
                         }
                     }
                     VSpacer(10)
-                    Timer(invisibleMode: $invisibleMode).allowsHitTesting(false)
+                    TimerText(invisibleMode: $invisibleMode)
+                        .environmentObject(stopWatch)
+                        .allowsHitTesting(false)
                         .padding(.bottom, invisibleMode ? geo.size.height/2 : 0)
+                    Text("\(stopWatch.timeCount)")
                     if !invisibleMode {
                         LapList().frame(height: geo.size.height/2)
                     }

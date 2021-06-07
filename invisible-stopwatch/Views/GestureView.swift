@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GestureView: View {
     @Binding var invisibleMode: Bool
+    @EnvironmentObject var stopWatch: StopWatch
     var body: some View {
         GeometryReader { _ in
             Rectangle()
@@ -18,10 +19,19 @@ struct GestureView: View {
         }
         .highPriorityGesture(TapGesture(count: 2).onEnded {
             print("double clicked")
+            if stopWatch.isRunning {
+                stopWatch.pause()
+            } else {
+                stopWatch.start()
+            }
         })
         .gesture(TapGesture().onEnded {
             print("single clicked")
+            stopWatch.recordLap()
         })
+        .onTapGesture(count: 3) {
+            print("3")
+        }
         .onLongPressGesture {
             print("Long")
             withAnimation { self.invisibleMode.toggle() }
