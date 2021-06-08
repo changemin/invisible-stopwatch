@@ -27,9 +27,18 @@ class UITests: XCTestCase {
         let app = XCUIApplication()
         setupSnapshot(app)
         app.launch()
-        snapshot("launch")
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        snapshot("gesture")
+        snapshot("invisible")
+    }
+    func testDarkMode() throws {
+        let app = XCUIApplication()
+        setupSnapshot(app)
+        var launchArguments: [AnyHashable] = []
+        launchArguments.append("-AppleInterfaceStyle")
+        launchArguments.append("Dark")
+        app.launchArguments = launchArguments as! [String]
+        app.launch()
+        snapshot("darkmode")
     }
 
     func testLaunchPerformance() throws {

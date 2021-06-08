@@ -12,3 +12,7 @@
 "No."="번호";
 "Split"="스플릿";
 "Total"="전체";
+"1. Singla Tap to Record Lap" = "탭하여 랩 기록하기";
+"2. Double Tap to Start/Stop" = "이중 탭하여 시작/멈추기";
+"3. Long Press to Hide/Show" = "길게 눌러서 인비저블모드";
+"4. Long Press on Timer to Reset" = "타이머 갈게 눌러서 리셋하기";
