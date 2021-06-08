@@ -20,12 +20,9 @@ struct SettingView: View {
                 }
                 Spacer()
             }
+            VSpacer(30)
             ScrollView {
-                Form {
-                    Section {
-                        Text("hello")
-                    }
-                }
+                Text("Settings are not ready yet!").nanumSquareR(size: 15, .bold, .divider).padding()
             }
         }
     }

@@ -73,8 +73,6 @@ struct ContentView: View {
                     }
                 }
                 .onChange(of: volObserver.volume, perform: { _ in
-//                    MPVolumeView.setVolume(previewVol!)
-//                    setVolumn
                     withAnimation { invisibleMode.toggle() }
                 })
             }

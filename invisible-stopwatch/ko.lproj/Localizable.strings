@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  invisible-stopwatch
+
+  Created by 변경민 on 2021/06/08.
+  
+*/
+
+"How to Use?" = "사용법";
+"Close" = "닫기";
+"Settings are not ready yet!"="설정 기능은 준비중입니다";
+"No."="번호";
+"Split"="스플릿";
+"Total"="전체";
