@@ -2,12 +2,12 @@
     "device_frame_version": "latest",
     "default": {
       "keyword": {
-        "font": "./fonts/NanumSquareR.ttf",
+        "font": "./fonts/NanumSquareRoundR.ttf",
         "font_size": 60,
         "color": "#000000"
       },
       "title": {
-        "font": "./fonts/NanumSquareEB.ttf",
+        "font": "./fonts/NanumSquareRoundEB.ttf",
         "font_size": 90,
         "color": "#000000"
       },
@@ -23,7 +23,7 @@
   
     "data": [
       {
-        "filter": "Meal",
+        "filter": "launch",
         "keyword": {
           "color": "#000000"
         }
