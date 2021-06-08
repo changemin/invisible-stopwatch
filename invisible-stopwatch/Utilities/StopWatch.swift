@@ -53,6 +53,7 @@ class StopWatch: ObservableObject {
         withAnimation(.spring()) {
             lapList.removeAll()
             timeCount = 0
+            splitCount = 0
             timeString = "00:00:00"
         }
     }
