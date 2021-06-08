@@ -20,6 +20,7 @@ struct LapList: View {
                 Spacer()
                 Text("Total").nanumSquareR(size: hSizeClass == .compact ? 15 : 20, .bold, .divider)
             }
+            VSpacer(10)
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 6) {
                     ForEach(stopWatch.lapList.reversed(), id: \.self) { lap in

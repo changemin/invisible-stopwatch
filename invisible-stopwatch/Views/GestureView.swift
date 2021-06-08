@@ -29,9 +29,6 @@ struct GestureView: View {
             print("single clicked")
             stopWatch.recordLap()
         })
-        .onTapGesture(count: 3) {
-            print("3")
-        }
         .onLongPressGesture {
             print("Long")
             withAnimation { self.invisibleMode.toggle() }

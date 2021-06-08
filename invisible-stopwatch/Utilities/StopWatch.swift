@@ -51,12 +51,16 @@ class StopWatch: ObservableObject {
     func reset() {
         pause()
         withAnimation(.spring()) {
-            lapList = []
+            lapList.removeAll()
             timeCount = 0
             timeString = "00:00:00"
         }
     }
     func generateTimeString() {
+        if timeCount >= 356400 {
+            timeCount = 356400
+            pause()
+        }
         let seconds = timeCount%60
         let minutes = (timeCount/60)%60
         let hours = (timeCount/3600)%60
