@@ -1,6 +1,6 @@
 # Todo 
 
-- [ ] Korean Localization
+- [x] Korean Localization
 - [ ] Fastlane screenshots
 - [ ] setting view
 - [ ] volumn key

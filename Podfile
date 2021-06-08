@@ -6,6 +6,6 @@ target 'invisible-stopwatch' do
   use_frameworks!
 
   # Pods for invisible-stopwatch
-
+  pod 'Firebase/Analytics'
   pod 'SwiftLint'
 end
