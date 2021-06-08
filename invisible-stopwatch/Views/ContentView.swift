@@ -26,6 +26,7 @@ struct ContentView: View {
                 ZStack {
                     GestureView(invisibleMode: $invisibleMode)
                         .environmentObject(stopWatch)
+                        .id("GestureView")
                     VStack {
                         Spacer()
                         if showHelp {
