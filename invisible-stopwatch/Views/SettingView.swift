@@ -8,13 +8,25 @@
 import SwiftUI
 
 struct SettingView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+
     var body: some View {
-        NavigationView {
-            Text("Setting")
-            .navigationBarHidden(true)
-        }.navigationViewStyle(StackNavigationViewStyle())
+        VStack {
+            HStack {
+                Button(action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                }) {
+                    Text("Close").nanumSquareR(size: 16, .bold, .divider).padding()
+                }
+                Spacer()
+            }
+            ScrollView {
+                Form {
+                    Section {
+                        Text("hello")
+                    }
+                }
+            }
+        }
     }
 }
-
-// Theme
-// 볼륨버튼 컨트롤

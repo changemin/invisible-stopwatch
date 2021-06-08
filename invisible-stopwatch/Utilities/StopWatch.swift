@@ -22,7 +22,7 @@ class StopWatch: ObservableObject {
     @Published var splitCount = 0
     var timer: Timer?
     func recordLap() {
-        if timeCount != 0 {
+        if timeCount != 0 && splitCount != 0 {
             withAnimation(.spring()) {
                 lapList.append(Lap(idx: lapList.count+1,
                                    split: generateTimeString(splitCount),

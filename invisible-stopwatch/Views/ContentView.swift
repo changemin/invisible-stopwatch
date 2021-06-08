@@ -11,6 +11,7 @@ import MediaPlayer
 struct ContentView: View {
     @State var invisibleMode: Bool = false
     @State var showHelp: Bool = false
+    @State var showSettings: Bool = false
     @ObservedObject var stopWatch = StopWatch()
     @ObservedObject private var volObserver = VolumeObserver()
     @Environment(\.horizontalSizeClass) var hSizeClass
@@ -58,7 +59,9 @@ struct ContentView: View {
                                 .padding()
                             }
                             Spacer()
-                            NavigationLink(destination: SettingView()) {
+                            Button(action: {
+                                self.showSettings.toggle()
+                            }) {
                                 HStack(spacing: 5) {
                                     Image(systemName: "gearshape.fill")
                                         .font(Font.system(size: 18, weight: .bold, design: .rounded))
@@ -74,6 +77,9 @@ struct ContentView: View {
 //                    setVolumn
                     withAnimation { invisibleMode.toggle() }
                 })
+            }
+            .sheet(isPresented: self.$showSettings) {
+                SettingView()
             }
             .navigationBarHidden(true)
         }.navigationViewStyle(StackNavigationViewStyle())
