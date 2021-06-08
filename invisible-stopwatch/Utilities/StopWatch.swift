@@ -8,9 +8,10 @@
 import Foundation
 import SwiftUI
 
-struct Lap {
+struct Lap: Hashable{
     var idx: Int
-    var timeString: String
+    var split: String
+    var time: String
 }
 
 class StopWatch: ObservableObject {
@@ -18,20 +19,24 @@ class StopWatch: ObservableObject {
     @Published var timeString: String = "00:00:00"
     @Published var isRunning: Bool = false
     @Published var timeCount = 0
+    @Published var splitCount = 0
     var timer: Timer?
-//    @Published var _ = T
-//    init() {
-//        timer
-//    }
     func recordLap() {
-//        lapList.append(<#T##newElement: Lap##Lap#>)
-//        scheduled
+        if timeCount != 0 {
+            withAnimation(.spring()) {
+                lapList.append(Lap(idx: lapList.count+1,
+                                   split: generateTimeString(splitCount),
+                                   time: generateTimeString(timeCount)))
+            }
+        }
+        splitCount = 0
     }
     func start() {
-        timer = Timer.scheduledTimer(withTimeInterval: 0.001,
+        timer = Timer.scheduledTimer(withTimeInterval: 1,
                                       repeats: true,
                                       block: { (_) in
                                         self.timeCount += 1
+                                        self.splitCount += 1
                                         self.generateTimeString()
                                       }
         )
@@ -44,16 +49,23 @@ class StopWatch: ObservableObject {
         self.isRunning = false
     }
     func reset() {
-        lapList = []
-        timeCount = 0
-        timeString = "00:00:00"
-        
+        pause()
+        withAnimation(.spring()) {
+            lapList = []
+            timeCount = 0
+            timeString = "00:00:00"
+        }
     }
     func generateTimeString() {
         let seconds = timeCount%60
         let minutes = (timeCount/60)%60
         let hours = (timeCount/3600)%60
         self.timeString = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
-        print(String(format: "%02d:%02d:%02d", hours, minutes, seconds))
+    }
+    func generateTimeString(_ timeCount: Int) -> String {
+        let seconds = timeCount%60
+        let minutes = (timeCount/60)%60
+        let hours = (timeCount/3600)%60
+        return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
     }
 }

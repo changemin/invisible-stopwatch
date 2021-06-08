@@ -11,12 +11,12 @@ struct TimerText: View {
     @Binding var invisibleMode: Bool
     @EnvironmentObject var stopWatch: StopWatch
     private var opacity: Double = 0.2
-    private var width: CGFloat = 35
-    private var height: CGFloat = 50
+    private var width: CGFloat = 50
+    private var height: CGFloat = 70
     var body: some View {
         ZStack {
             if invisibleMode {
-                HStack(spacing: 0) {
+                HStack(spacing: 10) {
                     ForEach(1...8, id: \.self) { char in
                         if char == 3 || char == 6 {
                             HSpacer(10)

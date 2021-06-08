@@ -11,6 +11,8 @@ struct ContentView: View {
     @State var invisibleMode: Bool = false
     @State var showHelp: Bool = false
     @ObservedObject var stopWatch = StopWatch()
+    @Environment(\.horizontalSizeClass) var hSizeClass
+
     var body: some View {
         GeometryReader { geo in
             ZStack {
@@ -29,9 +31,11 @@ struct ContentView: View {
                     VSpacer(10)
                     TimerText(invisibleMode: $invisibleMode)
                         .environmentObject(stopWatch)
-                        .padding(.bottom, invisibleMode ? geo.size.height/2 : 0)
+                        .padding(.bottom, invisibleMode ? geo.size.height*0.5 : 0)
                     if !invisibleMode {
-                        LapList().frame(height: geo.size.height/2)
+                        LapList()
+                            .frame(width: hSizeClass == .regular ? geo.size.width*0.3 : geo.size.width*0.7, height: geo.size.height*0.7)
+                            .environmentObject(stopWatch)
                     }
                 }
                 VStack {

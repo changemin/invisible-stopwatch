@@ -24,8 +24,12 @@ enum NanumFontWeight {
 
 extension Text {
     func timer() -> Text {
-        self.foregroundColor(Color("TextColor"))
-            .nanumSquareR(size: 60, .bold, .black)
+        var fontSize: CGFloat = 65
+        if UIDevice.current.userInterfaceIdiom == .pad {
+           fontSize = 80
+        }
+        return self.foregroundColor(Color("TextColor"))
+                    .nanumSquareR(size: fontSize, .bold, .black)
     }
     func caption() -> Text {
         self.foregroundColor(.gray)
