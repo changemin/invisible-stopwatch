@@ -15,3 +15,6 @@ struct SettingView: View {
         }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
+
+// Theme
+// 볼륨버튼 컨트롤

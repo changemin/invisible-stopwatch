@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Lap: Hashable{
+struct Lap: Hashable {
     var idx: Int
     var split: String
     var time: String
