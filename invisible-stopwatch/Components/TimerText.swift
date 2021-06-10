@@ -32,9 +32,13 @@ struct TimerText: View {
                     }
                 }
             }
-        }.onLongPressGesture {
+        }.highPriorityGesture(TapGesture(count: 2).onEnded {
+            stopWatch.reset()
+        })
+        .onLongPressGesture {
             stopWatch.reset()
         }
+        
     }
     init(invisibleMode: Binding<Bool>) {
         self._invisibleMode = invisibleMode

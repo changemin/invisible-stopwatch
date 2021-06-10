@@ -13,11 +13,14 @@ struct ContentView: View {
     @State var showHelp: Bool = false
     @State var showSettings: Bool = false
     @ObservedObject var stopWatch = StopWatch()
-    @ObservedObject private var volObserver = VolumeObserver()
+//    @ObservedObject private var volObserver = VolumeObserver()
     @Environment(\.horizontalSizeClass) var hSizeClass
     @State var previewVol: Float?
     init() {
-        previewVol = volObserver.volume
+//        previewVol = volObserver.volume
+        if ProcessInfo.processInfo.arguments.contains("testingInvisibleMode") {
+            _invisibleMode = .init(wrappedValue: true)
+        }
     }
 
     var body: some View {
@@ -34,7 +37,7 @@ struct ContentView: View {
                                 Text("1. Single Tap to Record Lap").caption()
                                 Text("2. Double Tap to Start/Stop").caption()
                                 Text("3. Long Press to Hide/Show").caption()
-                                Text("4. Long Press on Timer to Reset").caption()
+                                Text("4. Long Press on(or double tap) Timer to Reset").caption()
                             }
                         }
                         VSpacer(10)
@@ -73,9 +76,6 @@ struct ContentView: View {
                         Spacer()
                     }
                 }
-                .onChange(of: volObserver.volume, perform: { _ in
-                    withAnimation { invisibleMode.toggle() }
-                })
             }
             .sheet(isPresented: self.$showSettings) {
                 SettingView()

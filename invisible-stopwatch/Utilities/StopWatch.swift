@@ -21,6 +21,11 @@ class StopWatch: ObservableObject {
     @Published var timeCount = 0
     @Published var splitCount = 0
     var timer: Timer?
+    init() {
+        if ProcessInfo.processInfo.arguments.contains("testingGesture") {
+            addDummyData()
+        }
+    }
     func recordLap() {
         if timeCount != 0 && splitCount != 0 {
             withAnimation(.spring()) {
@@ -72,5 +77,11 @@ class StopWatch: ObservableObject {
         let minutes = (timeCount/60)%60
         let hours = (timeCount/3600)%60
         return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+    }
+    func addDummyData() {
+        self.timeString = "00:05:11"
+        self.lapList.append(Lap(idx: 1, split: "00:00:50", time: "00:00:50"))
+        self.lapList.append(Lap(idx: 2, split: "00:00:20", time: "00:01:10"))
+        self.lapList.append(Lap(idx: 3, split: "00:00:13", time: "00:01:23"))
     }
 }
